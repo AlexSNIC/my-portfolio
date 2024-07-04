@@ -10,10 +10,10 @@
   }
 
   &__list-item{
-    transition: 0.2s all;
+    transition: 0.3s all;
     cursor: pointer;
     &:hover{
-      background-color: rgba($light-gray, $alpha: 0.1);
+      background-color: rgba($light-gray, 0.1);
       border-bottom: 1px solid $light-gray;
     }
   }

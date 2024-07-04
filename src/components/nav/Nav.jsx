@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 function Nav() {
-  const [ isOpen, setIsOpen ] = useState(false);
+  const [ isOpen, setIsOpen ] = useState(true);
   
   return (
     <nav className={"nav " + (isOpen? "" : "nav--min")}>

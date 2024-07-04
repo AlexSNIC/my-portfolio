@@ -6,12 +6,13 @@ const Type = forwardRef(function({text, ...props}, ref) {
   function advanceText(){
     setCurrentLetters(prevCurrentLetters => prevCurrentLetters+1);
   }
+
   useEffect(() => {
-    setTimeout(advanceText, 100);
+    setTimeout(advanceText, 110);
   }, [currentLetters]);
 
   const currentText = (
-    text.slice(0, currentLetters) + ((currentLetters%10 < 5 && currentLetters > text.length)? "" : "|")
+    text.slice(0, currentLetters) + ((currentLetters >= text.length)? "" : "|")
   );
   return (
     <div {...props} ref={ref} className='type'>

@@ -1,0 +1,35 @@
+.u-center-block{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.u-center-x-block{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.u-fit{
+  width: fit-content;
+  height: fit-content;
+}
+
+.u-subdued{
+  opacity: 0.9;
+}
+.u-accent-blue{
+  color: $blue;
+}
+.u-accent-red{
+  color: $red;
+}
+.u-underline{
+  text-decoration: underline;
+}
+.u-no-wrap{
+  text-wrap: nowrap;
+}
+.u-scroll-y{
+  overflow-y: scroll;
+}

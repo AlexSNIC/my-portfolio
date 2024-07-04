@@ -3,5 +3,9 @@
   background-color: $x-dark-gray;
 }
 .page{
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: scroll;
+  height: 100vh;
 }

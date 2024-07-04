@@ -1,0 +1,33 @@
+@keyframes appear{
+
+}
+
+@mixin attach($translate-x, $translate-y, $deg, $name) {
+  @keyframes #{$name} {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 0;
+      background-color: lighten($red, 30%);
+      translate: $translate-x $translate-y;
+      rotate: $deg;
+    }
+    50% {
+      opacity: 1;
+      background-color: $red;
+      translate: 0 0;
+      rotate: 0deg;
+    }
+    70% {
+      background-color: $red;
+    }
+    75% {
+      background-color: rgba($faded-white, 0.8);
+    }
+    100% {
+      opacity: 1;
+      background-color: $red;
+    }
+  }
+}
