@@ -1,44 +1,16 @@
-@mixin attach($translate-x, $translate-y, $deg, $name) {
-  @keyframes #{$name} {
-    0% {
-      opacity: 0;
-    }
-    10% {
-      opacity: 0;
-      background-color: lighten($red, 30%);
-      translate: $translate-x $translate-y;
-      rotate: $deg;
-    }
-    50% {
-      opacity: 1;
-      background-color: $red;
-      translate: 0 0;
-      rotate: 0deg;
-    }
-    70% {
-      background-color: $red;
-    }
-    75% {
-      background-color: rgba($faded-white, 0.8);
-    }
-    100% {
-      opacity: 1;
-      background-color: $red;
-    }
-  }
-}
+
 
 .image {
   border-radius: $r-normal;
   box-shadow: 0 0 0 0.5rem $light-black;
-  &--decorated {
+  &--corner {
     display: block;
     position: relative;
     z-index: 1;
 
     &::before {
-      @include attach(-8rem, -8rem, 45deg, 'attach-top-left');
-      animation: attach-top-left 1s ease forwards;
+      @include attach('attach-top-left', -8rem, -8rem, 45deg, $red);
+      animation: attach-top-left 1s ease-in forwards;
       content: "";
       display: block;
       width: 35%;
@@ -53,8 +25,8 @@
     }
 
     &::after {
-      @include attach(8rem, 8rem, -45deg, 'attach-bottom-right');
-      animation: attach-bottom-right 1s ease forwards;
+      @include attach( 'attach-bottom-right', 8rem, 8rem, -45deg, $red);
+      animation: attach-bottom-right 1s ease-in forwards;
       content: "";
       display: block;
       width: 35%;

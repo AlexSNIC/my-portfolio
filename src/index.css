@@ -1,18 +1,327 @@
-/* Error: Expected expression.
- *    ,
- * 18 |     animation: ;
- *    |                ^
- *    '
- *   src\scss\pages\_home.scss 18:16  @import
- *   src\scss\index.scss 21:9         root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Expected expression.\a    \2577 \a 18 \2502      animation: ;\d\a    \2502                 ^\a    \2575 \a   src\\scss\\pages\\_home.scss 18:16  @import\a   src\\scss\\index.scss 21:9         root stylesheet";
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
 }
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Slab";
+  font-size: 1.1rem;
+  color: #ebebeb;
+}
+
+h1 {
+  font-size: 2.8rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.u-center-block {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.u-center-x-block {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.u-fit {
+  width: fit-content;
+  height: fit-content;
+}
+
+.u-subdued {
+  opacity: 0.9;
+}
+
+.u-accent-blue {
+  color: #3B82F6;
+}
+
+.u-accent-red {
+  color: #E53935;
+}
+
+.u-underline {
+  text-decoration: underline;
+}
+
+.u-no-wrap {
+  text-wrap: nowrap;
+}
+
+.u-scroll-y {
+  overflow-y: scroll;
+}
+
+.u-invisible {
+  visibility: hidden;
+}
+
+.u-my-s {
+  margin: 1rem 0;
+}
+
+.button {
+  background-color: #df211d;
+  border: none;
+  color: #ebebeb;
+  font-size: 1.4rem;
+  font-family: inherit;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: 0.2s all;
+}
+.button:hover {
+  background-color: #cd1e1a;
+  box-shadow: 0 0.2rem 0 rgba(0, 0, 0, 0.2);
+  transform: translateY(-0.15rem);
+}
+.button:active {
+  transition: 0.1s all;
+  transform: translateY(0);
+  box-shadow: 0 0 0 black;
+}
+
+.no-button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.nav {
+  min-height: 100vh;
+  background-color: #121212;
+  position: relative;
+  padding-bottom: 1rem;
+}
+.nav__list {
+  list-style: none;
+  font-size: 1.5rem;
+}
+.nav__list-item {
+  transition: 0.3s all;
+  cursor: pointer;
+}
+.nav__list-item:hover {
+  background-color: rgba(174, 175, 179, 0.1);
+  border-bottom: 1px solid #aeafb3;
+}
+.nav__list-link, .nav__list-link:visited {
+  padding: 1rem 2rem;
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  text-wrap: nowrap;
+}
+.nav__list-text {
+  transition: 0.2s all;
+}
+.nav__list-text--closed {
+  font-size: 0;
+  color: rgba(27, 28, 30, 0);
+}
+.nav__list-item:has(.nav__close-button) {
+  padding: 0;
+  text-align: center;
+}
+.nav__close-button {
+  width: 100%;
+  height: 3rem;
+  animation: none;
+  transition: 0.3s all;
+}
+.nav__close-button.a-rotate-reverse {
+  transform: rotate(180deg);
+}
+.nav__close-button.a-rotate {
+  transform: rotate(360deg);
+}
+
+.app {
+  display: flex;
+  background-color: #1b1c1e;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+.image {
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0 0.5rem #121212;
+}
+.image--corner {
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+.image--corner::before {
+  animation: attach-top-left 1s ease-in forwards;
+  content: "";
+  display: block;
+  width: 35%;
+  height: 35%;
+  position: absolute;
+  z-index: -1;
+  top: -8%;
+  left: -8%;
+  background-color: #E53935;
+  border-radius: 0.5rem;
+  clip-path: polygon(0 0, 0 100%, 10% 100%, 10% 10%, 100% 10%, 100% 0, 0 0);
+}
+@keyframes attach-top-left {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+    background-color: #f6bebd;
+    translate: -8rem -8rem;
+    rotate: 45deg;
+  }
+  50% {
+    opacity: 1;
+    background-color: #E53935;
+    translate: 0 0;
+    rotate: 0deg;
+  }
+  70% {
+    background-color: #E53935;
+  }
+  75% {
+    background-color: rgba(235, 235, 235, 0.8);
+  }
+  100% {
+    opacity: 1;
+    background-color: #E53935;
+  }
+}
+.image--corner::after {
+  animation: attach-bottom-right 1s ease-in forwards;
+  content: "";
+  display: block;
+  width: 35%;
+  height: 35%;
+  position: absolute;
+  z-index: -1;
+  bottom: -8%;
+  right: -8%;
+  background-color: #E53935;
+  border-radius: 0.5rem;
+  clip-path: polygon(0 0, 0 100%, 10% 100%, 10% 10%, 100% 10%, 100% 0, 0 0);
+  transform: scale(-1);
+}
+@keyframes attach-bottom-right {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+    background-color: #f6bebd;
+    translate: 8rem 8rem;
+    rotate: -45deg;
+  }
+  50% {
+    opacity: 1;
+    background-color: #E53935;
+    translate: 0 0;
+    rotate: 0deg;
+  }
+  70% {
+    background-color: #E53935;
+  }
+  75% {
+    background-color: rgba(235, 235, 235, 0.8);
+  }
+  100% {
+    opacity: 1;
+    background-color: #E53935;
+  }
+}
+
+.footer {
+  width: 100%;
+  background-color: #161719;
+  text-align: center;
+  padding: 0.5rem;
+  color: #aeafb3;
+}
+
+.header {
+  background-color: #121212;
+  width: 100%;
+  line-height: 3rem;
+  text-align: end;
+  padding: 0 1rem;
+}
+
+.home {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  width: 100%;
+  padding: 10rem 4rem;
+  align-items: center;
+}
+.home__title {
+  font-size: 2.4rem;
+  letter-spacing: 0.2rem;
+  margin-bottom: 0.5rem;
+  animation: appear 0.5s ease;
+}
+.home__subtitle {
+  margin-bottom: 1rem;
+}
+.home__text {
+  animation: appear 0.5s ease;
+}
+.home__image {
+  max-width: 25rem;
+  animation: appear 0.5s;
+}
+.home__button {
+  animation: appear 0.5s ease;
+}
+
+/*# sourceMappingURL=index.css.map */

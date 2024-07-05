@@ -7,17 +7,22 @@
   align-items: center;
 
   &__title{
-    letter-spacing: 0.5rem;
+    font-size: 2.4rem;
+    letter-spacing: 0.2rem;
     margin-bottom: 0.5rem;
+    animation: appear 0.5s ease;
   }
   &__subtitle{
-    margin-bottom: 1rem;
+    margin-bottom : 1rem;
   }
   &__text{
-
-    animation: ;
+    animation: appear 0.5s ease;
   }
   &__image{
     max-width: 25rem;
+    animation: appear 0.5s;
+  }
+  &__button{
+    animation: appear 0.5s ease;
   }
 }
