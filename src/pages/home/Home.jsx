@@ -12,7 +12,7 @@ function Home() {
       <section className='home'>
         <div className="home__info">
           <h1 className='home__title'>
-            I'm Solomon <span className='u-accent-red'>Alexandru - Nicolae</span>
+            I'm Solomon <span className='u-no-wrap u-accent-red'>Alexandru - Nicolae</span>
           </h1>
           <Timer time={550}>
             <h2 className='u-fit u-accent-blue home__subtitle'>

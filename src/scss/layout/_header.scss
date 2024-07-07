@@ -1,7 +1,15 @@
 .header{
+  position: relative;
   background-color: $light-black;
   width: 100%;
   line-height: 3rem;
   text-align: center;
   padding: 0 1rem;
+
+  &__list{
+    position: absolute;
+    top: 0;
+    font-size: 2rem;
+    left: 1rem;
+  }
 }

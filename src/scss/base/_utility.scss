@@ -14,9 +14,6 @@
   width: fit-content;
   height: fit-content;
 }
-.u-full-width{
-  width: 100%;
-}
 .u-subdued{
   opacity: 0.9;
 }
@@ -40,4 +37,10 @@
 }
 .u-my-s{
   margin: 1rem 0;
+}
+.u-0-width{
+  width: 0;
+}
+.u-full-width{
+  width: 100%;
 }

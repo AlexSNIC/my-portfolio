@@ -61,10 +61,6 @@ a:visited {
   height: fit-content;
 }
 
-.u-full-width {
-  width: 100%;
-}
-
 .u-subdued {
   opacity: 0.9;
 }
@@ -97,6 +93,14 @@ a:visited {
   margin: 1rem 0;
 }
 
+.u-0-width {
+  width: 0;
+}
+
+.u-full-width {
+  width: 100%;
+}
+
 .button {
   background-color: #df211d;
   border: none;
@@ -126,55 +130,6 @@ a:visited {
   font: inherit;
   color: inherit;
   cursor: pointer;
-}
-
-.nav {
-  min-height: 100vh;
-  background-color: #121212;
-  position: relative;
-  padding-bottom: 1rem;
-}
-.nav__list {
-  list-style: none;
-  font-size: 1.5rem;
-}
-.nav__list-item {
-  transition: 0.3s all;
-  cursor: pointer;
-}
-.nav__list-item:hover {
-  background-color: rgba(174, 175, 179, 0.1);
-  border-bottom: 1px solid #aeafb3;
-}
-.nav__list-link, .nav__list-link:visited {
-  padding: 1rem 2rem;
-  display: inline-block;
-  text-decoration: none;
-  color: inherit;
-  text-wrap: nowrap;
-}
-.nav__list-text {
-  transition: 0.2s all;
-}
-.nav__list-text--closed {
-  font-size: 0;
-  color: rgba(27, 28, 30, 0);
-}
-.nav__list-item:has(.nav__close-button) {
-  padding: 0;
-  text-align: center;
-}
-.nav__close-button {
-  width: 100%;
-  height: 3rem;
-  animation: none;
-  transition: 0.3s all;
-}
-.nav__close-button.a-rotate-reverse {
-  transform: rotate(180deg);
-}
-.nav__close-button.a-rotate {
-  transform: rotate(360deg);
 }
 
 .app {
@@ -321,8 +276,8 @@ a:visited {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 1rem 0;
-  align-items: center;
+  padding: 1rem 2rem;
+  width: clamp(15rem, 100%, 45rem);
 }
 .form__label {
   display: block;
@@ -336,7 +291,7 @@ a:visited {
   font-size: 1.2rem;
   color: #ebebeb;
   font-family: inherit;
-  width: 35rem;
+  width: 100%;
 }
 .form__field:focus {
   outline: 2px solid rgba(59, 130, 246, 0.4);
@@ -349,7 +304,7 @@ a:visited {
   font-size: 1.2rem;
   color: #ebebeb;
   font-family: inherit;
-  width: 35rem;
+  width: 100%;
   height: 8rem;
 }
 .form__textarea:focus {
@@ -372,11 +327,86 @@ a:visited {
 }
 
 .header {
+  position: relative;
   background-color: #121212;
   width: 100%;
   line-height: 3rem;
   text-align: center;
   padding: 0 1rem;
+}
+.header__list {
+  position: absolute;
+  top: 0;
+  font-size: 2rem;
+  left: 1rem;
+}
+
+.nav {
+  min-height: 100vh;
+  background-color: #121212;
+  position: relative;
+  padding-bottom: 1rem;
+}
+.nav--min {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #121212;
+  z-index: 99999;
+}
+.nav__list {
+  list-style: none;
+  font-size: 1.5rem;
+}
+.nav__list-item {
+  transition: 0.3s all;
+  cursor: pointer;
+}
+.nav__list-item:hover {
+  background-color: rgba(174, 175, 179, 0.1);
+  border-bottom: 1px solid #aeafb3;
+}
+.nav__list-link, .nav__list-link:visited {
+  padding: 1rem 2rem;
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  text-wrap: nowrap;
+  width: 100%;
+}
+.nav__list-text {
+  transition: 0.2s all;
+}
+.nav__list-text--closed {
+  font-size: 0;
+  color: rgba(27, 28, 30, 0);
+}
+.nav__list-item:has(.nav__close-button) {
+  padding: 0;
+  text-align: center;
+}
+.nav__close-button {
+  width: 100%;
+  height: 3rem;
+  animation: none;
+  transition: 0.3s all;
+}
+.nav__close-button.a-rotate-reverse {
+  transform: rotate(180deg);
+}
+.nav__close-button.a-rotate {
+  transform: rotate(360deg);
+}
+@media (max-width: 670px) {
+  .nav {
+    display: none;
+  }
+  .nav--min {
+    display: block;
+  }
 }
 
 .contacts__list {
@@ -419,6 +449,11 @@ a:visited {
 }
 .home__button {
   animation: appear 0.5s ease;
+}
+@media (max-width: 1250px) {
+  .home {
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
