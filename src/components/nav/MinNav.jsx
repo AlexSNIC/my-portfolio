@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 function MinNav({isOpen}) {
 
-
   if(!isOpen)
     return <></>
   return (
