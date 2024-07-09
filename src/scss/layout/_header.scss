@@ -7,9 +7,17 @@
   padding: 0 1rem;
 
   &__list{
+    display: none;
     position: absolute;
     top: 0;
     font-size: 2rem;
     left: 1rem;
+    cursor: pointer;
+  }
+
+  @media (max-width: $med-nav-min) {
+    &__list{
+      display: block;
+    }
   }
 }

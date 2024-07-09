@@ -19,43 +19,35 @@ function Nav() {
         <li className="nav__list-item">
           <Link className="nav__list-link" to="/">
             <i className="bi bi-house"></i>
-            <span className={(isOpen ? "" : "nav__list-text--closed") + " nav__list-text"}>Home</span>
+            <span className={(isOpen ? "" : "nav__list-text--closed") + " nav__list-text"}> Home</span>
           </Link>
         </li>
 
         <li className="nav__list-item">
           <Link className="nav__list-link" to="/skills">
             <i className="bi bi-arrow-up-circle"></i>
-            <span className={(isOpen ? "" : "nav__list-text--closed") + " nav__list-text"}>
-              My Skills
-            </span>
+            <span className={(isOpen ? "" : "nav__list-text--closed") + " nav__list-text"}> My Skills</span>
           </Link>
         </li>
 
         <li className="nav__list-item">
           <Link className="nav__list-link" to="portfolio">
             <i className="bi bi-folder"></i>
-            <span className={(isOpen ? "" : "nav__list-text--closed") + " nav__list-text"}>
-              Portfolio
-            </span>
+            <span className={(isOpen ? "" : "nav__list-text--closed") + " nav__list-text"}> Portfolio</span>
           </Link>
         </li>
 
         <li className="nav__list-item">
           <Link className="nav__list-link" to="about">
             <i className="bi bi-person"></i>
-            <span className={(isOpen ? "" : "nav__list-text--closed") + " nav__list-text"}>
-              About Me
-            </span>
+            <span className={(isOpen ? "" : "nav__list-text--closed") + " nav__list-text"}> About Me</span>
           </Link>
         </li>
 
         <li className="nav__list-item">
           <Link className="nav__list-link" to="contacts">
             <i className="bi bi-telephone"></i>
-            <span className={(isOpen ? "" : "nav__list-text--closed") + " nav__list-text"}>
-              Contacts
-            </span>
+            <span className={(isOpen ? "" : "nav__list-text--closed") + " nav__list-text"}> Contacts</span>
           </Link>
         </li>
       </ul>
