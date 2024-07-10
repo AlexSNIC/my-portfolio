@@ -5,6 +5,7 @@ import Type from '../../components/decorations/Type';
 import portrait from  "../../assets/portrait-min.jpg";
 import Timer from '../../components/decorations/Timer';
 import PageLink from '../../components/page-link/PageLink';
+import EventPreviewList from './EventPreviewList';
 
 function Home() {
   return (
@@ -25,7 +26,7 @@ function Home() {
             </p>
           </Timer>
           <Timer time={1550}>
-            <Button className="home__button u-my-s" type="fill"> My Events </Button>
+            <Button onClick={() => {}} className="home__button u-my-s" type="fill"> My Events </Button>
           </Timer>
         </div>
         <Timer time={1350}>
@@ -34,6 +35,7 @@ function Home() {
           </div>
         </Timer>
       </section>
+      <EventPreviewList />
     </>
   )
 }

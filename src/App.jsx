@@ -5,6 +5,7 @@ import Skills from "./pages/skills/Skills"
 import Portfolio from "./pages/portfolio/Portfolio"
 import About from "./pages/about/About"
 import Contacts from "./pages/contacts/Contacts"
+import EventRouter from "./pages/event/EventRouter"
 import Nav from "./components/nav/Nav"
 import Header from "./components/header/Header"
 import Footer from "./components/footer/Footer"
@@ -22,6 +23,7 @@ function App() {
             <Route path="/portfolio" element={<Portfolio />}/>
             <Route path="/about" element={<About />}/>
             <Route path="/contacts" element={<Contacts />}/>
+            <Route path="/events/:eventId" element={<EventRouter />}/>
           </Routes>
         </main>
         <Footer />
