@@ -6,9 +6,9 @@ import Portfolio from "./pages/portfolio/Portfolio"
 import About from "./pages/about/About"
 import Contacts from "./pages/contacts/Contacts"
 import EventRouter from "./pages/event/EventRouter"
-import Nav from "./components/nav/Nav"
-import Header from "./components/header/Header"
-import Footer from "./components/footer/Footer"
+import Nav from "./components/layout/Nav"
+import Header from "./components/layout/Header"
+import Footer from "./components/layout/Footer"
 function App() {
 
   return (

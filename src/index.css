@@ -352,6 +352,34 @@ a:visited {
   font-size: 0.8em;
 }
 
+.event {
+  padding: 2rem 3rem;
+}
+.event__header {
+  text-align: center;
+}
+.event__title {
+  font-size: 2.4rem;
+}
+.event__timeline {
+  font-size: 1.8rem;
+  color: #bababa;
+}
+.event__description {
+  color: #e5e5e5;
+}
+.event__image {
+  max-width: 25rem;
+  max-height: 25rem;
+  width: auto;
+  height: auto;
+}
+.event__text-and-image {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .footer {
   width: 100%;
   background-color: #161719;

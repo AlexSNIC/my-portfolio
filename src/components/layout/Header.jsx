@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import MinNav from '../nav/MinNav';
+import MinNav from '../layout/MinNav';
 
 function Header() {
   const [ isNavOpen, setIsNavOpen ] = useState(false);

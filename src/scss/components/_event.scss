@@ -1,0 +1,66 @@
+.event-preview {
+  transition: 0.2s all;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $dark-gray;
+  }
+  &__button {
+    margin-right: 1rem;
+    padding: 1rem 1.2rem 1rem 0.8rem;
+    background-color: lighten($x-dark-gray, 2%);
+    font-size: 2rem;
+    line-height: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.2s all;
+    &:hover {
+      background-color: $dark-gray;
+    }
+  }
+  &__data {
+    border-left: 1px solid $light-gray;
+    padding-left: 1rem;
+  }
+  &__title {
+    // text-align: center;
+  }
+  &__description {
+    color: $light-gray;
+  }
+  &__date {
+    color: $light-gray;
+    font-size: 0.8em;
+  }
+}
+
+.event {
+  padding: 2rem 3rem;
+  
+  &__header {
+    text-align: center;
+  }
+  &__title {
+    font-size: 2.4rem;
+  }
+  &__timeline {
+    font-size: 1.8rem;
+    color: $dark-white;
+  }
+  &__description{
+    color: $light-dark-white;
+  }
+  &__image{
+    max-width: 25rem;
+    max-height: 25rem;
+    width: auto;
+    height: auto;
+  }
+  &__text-and-image{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}
