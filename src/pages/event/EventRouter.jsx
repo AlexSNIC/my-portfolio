@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 
-import MediaCamp2024 from "./events/MediaCamp2024"
+import MediaCamp2024 from "./list/MediaCamp2024"
 
 
 function EventRouter(){
