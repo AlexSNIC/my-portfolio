@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 
 import MediaCamp2024 from "./list/MediaCamp2024"
 
-
 function EventRouter(){
     const { eventId } = useParams();
     
