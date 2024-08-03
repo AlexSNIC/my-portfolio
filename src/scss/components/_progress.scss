@@ -1,0 +1,10 @@
+.progress{
+  display: flex;
+  gap: 1rem;
+  line-height: 1rem;
+  margin: 0.5rem 0;
+
+  &__progress{
+    accent-color: $red;
+  }
+}

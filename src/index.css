@@ -101,6 +101,40 @@ a:visited {
   width: 100%;
 }
 
+.u-flex {
+  display: flex;
+  gap: 1rem;
+}
+
+.u-justify-between {
+  justify-content: space-between;
+}
+
+.card {
+  background-color: #121212;
+  width: fit-content;
+  padding: 1rem;
+  box-shadow: 0.2rem 0.2rem 0.5rem rgba(255, 255, 255, 0.05);
+  border-radius: 0.5rem;
+}
+.card__title {
+  color: #E53935;
+}
+.card__subtitle {
+  color: #3B82F6;
+  font-size: 1.6rem;
+}
+
+.progress {
+  display: flex;
+  gap: 1rem;
+  line-height: 1rem;
+  margin: 0.5rem 0;
+}
+.progress__progress {
+  accent-color: #E53935;
+}
+
 .button {
   background-color: #df211d;
   border: none;
@@ -380,14 +414,6 @@ a:visited {
   gap: 1rem;
 }
 
-.footer {
-  width: 100%;
-  background-color: #161719;
-  text-align: center;
-  padding: 0.5rem;
-  color: #aeafb3;
-}
-
 .header {
   position: relative;
   background-color: #121212;
@@ -408,6 +434,14 @@ a:visited {
   .header__list {
     display: block;
   }
+}
+
+.footer {
+  width: 100%;
+  background-color: #161719;
+  text-align: center;
+  padding: 0.5rem;
+  color: #aeafb3;
 }
 
 .nav {

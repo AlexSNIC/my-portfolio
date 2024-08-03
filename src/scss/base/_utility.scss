@@ -44,3 +44,11 @@
 .u-full-width{
   width: 100%;
 }
+
+.u-flex{
+  display: flex;
+  gap: 1rem;
+}
+.u-justify-between{
+  justify-content: space-between;
+}

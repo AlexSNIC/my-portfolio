@@ -1,8 +1,13 @@
 import React from 'react'
+import SkillCard from './SkillCard'
 
 function Skills() {
   return (
-    <div>Skills</div>
+    <div>
+      <h1>Skills</h1>
+      <SkillCard></SkillCard>
+    </div>
+
   )
 }
 

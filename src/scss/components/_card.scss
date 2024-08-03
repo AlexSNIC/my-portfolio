@@ -1,0 +1,15 @@
+.card{
+  background-color: $light-black;
+  width: fit-content;
+  padding: 1rem;
+  box-shadow: 0.2rem 0.2rem 0.5rem rgba(white, 0.05);
+  border-radius: $r-normal;
+  
+  &__title{
+    color: $red;
+  }
+  &__subtitle{
+    color: $blue;
+    font-size: 1.6rem;
+  }
+}
