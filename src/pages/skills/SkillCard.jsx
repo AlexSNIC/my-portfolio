@@ -1,6 +1,7 @@
 import React from 'react'
 import Progress from '../../components/decorations/Progress'
 
+
 function SkillCard() {
   return (
     <div className='card'>
