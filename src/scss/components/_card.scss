@@ -12,4 +12,8 @@
     color: $blue;
     font-size: 1.6rem;
   }
+
+  &__image{
+    object-fit: contain;
+  }
 }

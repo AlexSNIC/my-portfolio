@@ -124,6 +124,9 @@ a:visited {
   color: #3B82F6;
   font-size: 1.6rem;
 }
+.card__image {
+  object-fit: contain;
+}
 
 .progress {
   display: flex;
