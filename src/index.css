@@ -116,6 +116,11 @@ a:visited {
   padding: 1rem;
   box-shadow: 0.2rem 0.2rem 0.5rem rgba(255, 255, 255, 0.05);
   border-radius: 0.5rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .card__title {
   color: #E53935;
@@ -123,6 +128,11 @@ a:visited {
 .card__subtitle {
   color: #3B82F6;
   font-size: 1.6rem;
+  margin-bottom: 0.6rem;
+}
+.card__list {
+  color: #aeafb3;
+  margin-left: 1.5rem;
 }
 .card__image {
   object-fit: contain;
@@ -588,6 +598,15 @@ a:visited {
   .home__image {
     max-width: 17rem;
   }
+}
+
+.skills {
+  padding: 1rem;
+}
+.skills__wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  gap: 0.8rem;
 }
 
 /*# sourceMappingURL=index.css.map */
