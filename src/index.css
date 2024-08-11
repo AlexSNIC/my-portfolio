@@ -190,7 +190,7 @@ a:visited {
   background-color: rgba(18, 18, 18, 0.8);
   align-items: center;
   opacity: 0;
-  font-size: 0.4rem;
+  font-size: 1.6rem;
   transition: 0.2s all;
   cursor: default;
 }

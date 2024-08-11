@@ -16,15 +16,15 @@ function SkillsList() {
         postRank="Senior"
         xp={36}
         src={imgJS}
-        list={["450+ hours", "*JQuery", "*TypeScript", "*NodeJS"]}
+        list={["450+ hours", "*JQuery", "*TypeScript"]}
       ></SkillCard>
       <SkillCard
-        title="Styles"
+        title="Styling"
         rank="Mid-level"
         postRank="Senior"
         xp={5}
         src={imgStyles}
-        list={["220+ hours", "CSS & SASS", "*PostCSS", "*Tailwind"]}
+        list={["300+ hours", "CSS & SASS", "*PostCSS", "*Tailwind"]}
       ></SkillCard>
       <SkillCard
         title="UX / UI"
@@ -43,12 +43,12 @@ function SkillsList() {
         list={["100+ hours", "JSX & *TSX"]}
       ></SkillCard>
       <SkillCard
-        title="Firebase"
+        title="Backend Engineering"
         rank="Trainee"
         postRank="Junior"
         xp={50}
         src={imgFirebase}
-        list={["Firestore", "Realtime Database", "Authentication"]}
+        list={["NodeJS", "ExpressJS","Firebase"]}
       ></SkillCard>
       <SkillCard
         title="C++"
