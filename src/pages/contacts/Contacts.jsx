@@ -7,11 +7,13 @@ function Contacts() {
     <>
       <section className="contacts">
         <div className="contacts__container">
-          <h1 className="contacts__title">Contacts</h1>
           <ContactList></ContactList>
         </div>
+        <div>
+          <h2 className="questions__title title--full">Have a question?</h2>
+          <Questions></Questions>
+        </div>
       </section>
-      <Questions></Questions>
     </>
   );
 }

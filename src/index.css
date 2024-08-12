@@ -101,6 +101,10 @@ a:visited {
   width: 100%;
 }
 
+.u-full-height {
+  height: 100%;
+}
+
 .u-flex {
   display: flex;
   gap: 1rem;
@@ -581,9 +585,14 @@ a:visited {
   }
 }
 
+.contacts {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 .contacts__list {
   list-style: none;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   line-height: 2rem;
   letter-spacing: 0.2rem;
 }
@@ -595,6 +604,7 @@ a:visited {
   flex-direction: column;
   align-items: center;
   padding: 3rem 0;
+  margin: 2.4rem 0;
 }
 @media (max-width: 500px) {
   .contacts__link {

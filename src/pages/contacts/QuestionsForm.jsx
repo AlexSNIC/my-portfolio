@@ -2,7 +2,7 @@ import React from 'react'
 
 function QuestionsForm() {
   return (
-    <div className="u-full-width">
+    <div className="u-full-width u-full-height">
       <form className="form u-fit u-center-x-block">
         <div>
           <label className="form__label" htmlFor="questions-name">
