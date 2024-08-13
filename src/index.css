@@ -240,13 +240,15 @@ a:visited {
 }
 
 .page {
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   overflow-y: scroll;
   overflow-x: hidden;
   height: 100vh;
   width: 100%;
+  padding-bottom: 2.4rem;
 }
 
 .underline {
@@ -510,6 +512,9 @@ a:visited {
   text-align: center;
   padding: 0.5rem;
   color: #aeafb3;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .nav {
@@ -604,7 +609,7 @@ a:visited {
   flex-direction: column;
   align-items: center;
   padding: 3rem 0;
-  margin: 2.4rem 0;
+  height: 1fr;
 }
 @media (max-width: 500px) {
   .contacts__link {
