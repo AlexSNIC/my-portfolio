@@ -1,5 +1,4 @@
 import React from 'react'
-
 import Button from '../../components/button/Button';
 import Type from '../../components/decorations/Type';
 import portrait from  "../../assets/portrait-min.jpg";
