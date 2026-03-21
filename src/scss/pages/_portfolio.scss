@@ -1,0 +1,46 @@
+.portfolio{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  
+  &__block{
+    width: 26rem;
+    padding: 1rem;
+    background-color: rgba($black, 0.2);
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    
+    &:hover{
+      box-shadow: 0 0.5rem 1rem rgba($gray, 0.2);
+    }
+    img {
+      width: 24rem;
+      height: 13.5rem;
+      border-radius: 0.3rem;
+      object-fit: cover;
+      object-position: center left;
+    }
+    h3 {
+      margin-top: 0.5rem;
+      color: $red;
+    }
+    p{
+      color: $light-gray;
+    };
+  }
+  &__buttons {
+    margin-top: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  &__link {
+    background-color: $blue;
+    font-size: 1.1rem;
+    
+    &:hover {
+      background-color: rgba($blue, 0.8);
+    }
+  }
+}

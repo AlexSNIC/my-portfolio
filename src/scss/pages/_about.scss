@@ -1,0 +1,21 @@
+.about{
+  display: flex;
+  flex-direction: column;
+  margin: 4rem;
+  
+  &__hero{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__block{
+    margin-top: 2rem;
+  }
+  &__updated{
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: gray;
+    text-align: right;
+  }
+}

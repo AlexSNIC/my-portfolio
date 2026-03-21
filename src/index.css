@@ -9,12 +9,12 @@
     scale: 1;
   }
 }
-
 *, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: "Roboto Slab";
   font-size: 1.1rem;
@@ -112,6 +112,10 @@ a:visited {
 
 .u-justify-between {
   justify-content: space-between;
+}
+
+.u-tab {
+  margin-left: 2rem;
 }
 
 .card {
@@ -221,7 +225,7 @@ a:visited {
 }
 .button:active {
   transition: 0.1s all;
-  transform: translateY(0);
+  transform: translateY(-0.1rem);
   box-shadow: 0 0 0 black;
 }
 
@@ -232,6 +236,10 @@ a:visited {
   font: inherit;
   color: inherit;
   cursor: pointer;
+}
+.no-button:hover {
+  background-color: transparent;
+  box-shadow: none;
 }
 
 .app {
@@ -590,6 +598,26 @@ a:visited {
   }
 }
 
+.about {
+  display: flex;
+  flex-direction: column;
+  margin: 4rem;
+}
+.about__hero {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.about__block {
+  margin-top: 2rem;
+}
+.about__updated {
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  color: gray;
+  text-align: right;
+}
+
 .contacts {
   height: 100%;
   display: flex;
@@ -664,6 +692,50 @@ a:visited {
   .home__image {
     max-width: 17rem;
   }
+}
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+}
+.portfolio__block {
+  width: 26rem;
+  padding: 1rem;
+  background-color: rgba(9, 9, 9, 0.2);
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+.portfolio__block:hover {
+  box-shadow: 0 0.5rem 1rem rgba(59, 60, 66, 0.2);
+}
+.portfolio__block img {
+  width: 24rem;
+  height: 13.5rem;
+  border-radius: 0.3rem;
+  object-fit: cover;
+  object-position: center left;
+}
+.portfolio__block h3 {
+  margin-top: 0.5rem;
+  color: #E53935;
+}
+.portfolio__block p {
+  color: #aeafb3;
+}
+.portfolio__buttons {
+  margin-top: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.portfolio__link {
+  background-color: #3B82F6;
+  font-size: 1.1rem;
+}
+.portfolio__link:hover {
+  background-color: rgba(59, 130, 246, 0.8);
 }
 
 .skills {
