@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom"
 import Home from "./pages/home/Home"
 import Skills from "./pages/skills/Skills"
 import Portfolio from "./pages/portfolio/Portfolio"
+import Events from "./pages/event/Events"
 import ProjectRouter from "./pages/portfolio/ProjectRouter"
 import About from "./pages/about/About"
 import Contacts from "./pages/contacts/Contacts"
@@ -25,6 +26,7 @@ function App() {
             <Route path="/portfolio/:projectId" element={<ProjectRouter />}/>
             <Route path="/about" element={<About />}/>
             <Route path="/contacts" element={<Contacts />}/>
+            <Route path="/events" element={<Events />}/>
             <Route path="/events/:eventId" element={<EventRouter />}/>
           </Routes>
         </main>

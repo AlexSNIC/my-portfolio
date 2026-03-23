@@ -1,0 +1,40 @@
+.format{
+  
+  &__box{
+    display: grid;
+    gap: 2rem;
+    margin: 1rem 0;
+    justify-content: center;
+    align-items: center;
+  }
+  &__text-and-image{
+    grid-template-columns: 3fr 1.2fr;
+  }
+  &__image-and-text{
+    grid-template-columns: 1.2fr 3fr;
+  }
+  &__image-text-image{
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+
+  &__text{
+    color: $light-dark-white;
+    min-width: 12rem;
+  }
+  &__text--start{
+    align-self: start;
+  }
+
+  &__image{
+    width:100%;
+    height: auto;
+    min-width: 18rem;
+    max-height: 18rem;
+    object-fit: contain;
+    background-color: $dark-gray;
+    display: block;
+    box-shadow: 0.1rem 0.1rem 0.3rem $gray;
+    border-radius: 1rem;
+  }
+
+}

@@ -31,21 +31,29 @@ function Nav() {
         </li>
 
         <li className="nav__list-item">
-          <Link className="nav__list-link" to="portfolio">
+          <Link className="nav__list-link" to="/portfolio">
             <i className="bi bi-folder"></i>
             <span className={(isOpen ? "" : "nav__list-text--closed") + " nav__list-text"}> Portfolio</span>
           </Link>
         </li>
 
         <li className="nav__list-item">
-          <Link className="nav__list-link" to="about">
+          <Link className="nav__list-link" to="/events">
+            <i className="bi bi-flag"></i>
+            <span className={(isOpen ? "" : "nav__list-text--closed") + " nav__list-text"}> Events</span>
+          </Link>
+        </li>
+
+
+        <li className="nav__list-item">
+          <Link className="nav__list-link" to="/about">
             <i className="bi bi-person"></i>
             <span className={(isOpen ? "" : "nav__list-text--closed") + " nav__list-text"}> About Me</span>
           </Link>
         </li>
 
         <li className="nav__list-item">
-          <Link className="nav__list-link" to="contacts">
+          <Link className="nav__list-link" to="/contacts">
             <i className="bi bi-telephone"></i>
             <span className={(isOpen ? "" : "nav__list-text--closed") + " nav__list-text"}> Contacts</span>
           </Link>

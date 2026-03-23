@@ -1,10 +1,10 @@
 import React from 'react'
 import Button from '../../components/button/Button';
 import Type from '../../components/decorations/Type';
-import portrait from  "../../assets/portrait-min.jpg";
+import portrait from  "../../assets/photo.webp";
 import Timer from '../../components/decorations/Timer';
 import PageLink from '../../components/page-link/PageLink';
-import EventPreviewList from './EventPreviewList';
+import EventPreviewList from '../event/EventPreviewList';
 
 function Home() {
   return (

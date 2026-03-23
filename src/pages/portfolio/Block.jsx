@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function Block({img, name, finished, updated, link = false, projectId}) {
+function Block({img, name, finished, updated, src = false, link = false, projectId}) {
   return (
     <div className="portfolio__block">
       <img src={img} alt={name} />
@@ -12,6 +12,11 @@ function Block({img, name, finished, updated, link = false, projectId}) {
         {link && (
           <a href={link} target="_blank">
             <button className='button portfolio__link'>View Project</button>
+          </a>
+        )}
+        {src && (
+          <a href={src} target="_blank">
+            <button className='button portfolio__link'>Source Code</button>
           </a>
         )}
         <Link to={`/portfolio/${projectId}`}>

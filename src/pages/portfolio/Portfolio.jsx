@@ -1,12 +1,24 @@
 import React from 'react'
 import Block from './Block'
-import TwiChess from "../../assets/portfolio/twichess.png";
-import Pathfinder from "../../assets/portfolio/pathfinder.png";
+
+import data from './projects_data.js'
+
 function Portfolio() {
   return (
     <section className="portfolio">
-      <Block projectId="twichess" img={TwiChess} name="TwiChess" finished="May 2023" updated="May 2023" link="https://alexsnic.github.io/twichess/home.html"/>
-      <Block projectId="pathfinder" img={Pathfinder} name="PathFinder" finished="March 2024" updated="March 2024"/>
+ 
+      {Object.values(data).sort((a, b) => new Date(b.lastUpdated) - new Date(a.lastUpdated)).map((project) => (
+        <Block
+          key={project.id}
+          projectId={project.id}
+          img={project.img}
+          name={project.title}
+          finished={project.finished}
+          updated={project.lastUpdated}
+          link={project.link}
+          src={project.src}
+        />
+      ))}
     </section>
   )
 }

@@ -1,10 +1,10 @@
 import React from 'react'
 
-function TextAndImage({text, image}) {
+function TextAndImage({text, image, alt = "image"}) {
   return (
-        <div className="event__text-and-image">
-          <p className="event__description">{text}</p>
-          <img src={image} alt="main image" className='image event__image' />
+        <div className="format__box format__text-and-image">
+          <p className="format__text">{text}</p>
+          <img src={image} alt={alt} className='format__image' />
         </div>
   )
 }

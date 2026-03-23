@@ -10,21 +10,28 @@ function Header() {
     setIsNavOpen(prevIsNavOpen => !prevIsNavOpen);
   }
   useEffect(() => {
-    switch(location.pathname) {
-      case "/skills":
+    let start = location.pathname.split("/")[1];
+    switch(start) {
+      case "":
+        setPage("Home");
+        break;
+      case "skills":
         setPage("My Skills");
         break;
-      case "/portfolio":
+      case "portfolio":
         setPage("Portfolio");
         break;
-      case "/about":
+      case "about":
         setPage("About Me");
         break;
-      case "/contacts":
+      case "contacts":
         setPage("Contacts");
         break;
+      case "events":
+        setPage("Events");
+        break;
       default:
-        setPage("Home");
+        setPage("\u00A0");
     }
   }, [location.pathname]);
   return (

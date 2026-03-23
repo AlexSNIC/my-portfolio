@@ -35,6 +35,13 @@ function MinNav({isOpen, setIsOpen}) {
         </li>
 
         <li className="nav__list-item">
+          <Link onClick={() => setIsOpen(false)} className="nav__list-link" to="events">
+            <i className="bi bi-folder"></i>
+            <span className="nav__list-text"> Events </span>
+          </Link>
+        </li>
+
+        <li className="nav__list-item">
           <Link onClick={() => setIsOpen(false)} className="nav__list-link" to="about">
             <i className="bi bi-person"></i>
             <span className="nav__list-text"> About Me </span>

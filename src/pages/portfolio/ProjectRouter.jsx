@@ -1,19 +1,11 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 
-import TwiChess from "./list/TwiChess"
-import PathFinder from "./list/PathFinder"
+import data from "./projects_data.js";
 
 function ProjectRouter(){
     const { projectId } = useParams();
-    
-    let Page;
-    switch(projectId){
-      case "twichess": Page = TwiChess; break;
-      case "pathfinder": Page = PathFinder; break;
-      
-    }
-    
+    let Page = data[projectId]?.page;
     return <Page />
 }
 

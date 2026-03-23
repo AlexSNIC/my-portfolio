@@ -508,7 +508,7 @@ a:visited {
   left: 1rem;
   cursor: pointer;
 }
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .header__list {
     display: block;
   }
@@ -589,13 +589,48 @@ a:visited {
 .nav__close-button.a-rotate {
   transform: rotate(360deg);
 }
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .nav {
     display: none;
   }
   .nav--min {
     display: block;
   }
+}
+
+.format__box {
+  display: grid;
+  gap: 2rem;
+  margin: 1rem 0;
+  justify-content: center;
+  align-items: center;
+}
+.format__text-and-image {
+  grid-template-columns: 3fr 1.2fr;
+}
+.format__image-and-text {
+  grid-template-columns: 1.2fr 3fr;
+}
+.format__image-text-image {
+  grid-template-columns: 1fr 2fr 1fr;
+}
+.format__text {
+  color: #e5e5e5;
+  min-width: 12rem;
+}
+.format__text--start {
+  align-self: start;
+}
+.format__image {
+  width: 100%;
+  height: auto;
+  min-width: 18rem;
+  max-height: 18rem;
+  object-fit: contain;
+  background-color: #2b2c31;
+  display: block;
+  box-shadow: 0.1rem 0.1rem 0.3rem #3b3c42;
+  border-radius: 1rem;
 }
 
 .about {
@@ -695,13 +730,15 @@ a:visited {
 }
 
 .portfolio {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   gap: 2rem;
   padding: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
 }
 .portfolio__block {
-  width: 26rem;
   padding: 1rem;
   background-color: rgba(9, 9, 9, 0.2);
   border-radius: 0.5rem;
@@ -711,8 +748,9 @@ a:visited {
   box-shadow: 0 0.5rem 1rem rgba(59, 60, 66, 0.2);
 }
 .portfolio__block img {
-  width: 24rem;
-  height: 13.5rem;
+  aspect-ratio: 16/9;
+  width: 100%;
+  height: auto;
   border-radius: 0.3rem;
   object-fit: cover;
   object-position: center left;
@@ -737,6 +775,9 @@ a:visited {
 .portfolio__link:hover {
   background-color: rgba(59, 130, 246, 0.8);
 }
+.portfolio .no-button {
+  margin: 0.5rem 0;
+}
 
 .skills {
   padding: 1rem;
@@ -754,6 +795,13 @@ a:visited {
 .skills__title {
   margin-bottom: 1rem;
   margin-top: 2rem;
+}
+
+.project {
+  padding: 2rem;
+}
+.project__date {
+  color: #aeafb3;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -1,11 +1,13 @@
 .portfolio{
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   gap: 2rem;
   padding: 2rem;
-  
+  grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+
   &__block{
-    width: 26rem;
     padding: 1rem;
     background-color: rgba($black, 0.2);
     border-radius: 0.5rem;
@@ -15,8 +17,9 @@
       box-shadow: 0 0.5rem 1rem rgba($gray, 0.2);
     }
     img {
-      width: 24rem;
-      height: 13.5rem;
+      aspect-ratio: 16/9;
+      width: 100%;
+      height:auto;
       border-radius: 0.3rem;
       object-fit: cover;
       object-position: center left;
@@ -42,5 +45,8 @@
     &:hover {
       background-color: rgba($blue, 0.8);
     }
+  }
+  & .no-button {
+    margin: .5rem 0;
   }
 }
